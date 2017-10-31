@@ -18,4 +18,4 @@ class WeatherSituationView(GenericAPIView):
 		r = requests.get(weather_url, params=params)
 		json_object = r.json()
 		temp_k = float(json_object['main']['temp'])
-		
+		return temp_k
